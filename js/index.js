@@ -27,6 +27,7 @@ $( _ => {
     state.pokemons = json;
     const root = $('.root');
     render(root);
-    console.log(state.pokemons.pokemon_entries[8].pokemon_species.name);
+    console.log(state.pokemons.pokemon_entries);
+    filterByDistrict(state.pokemons.pokemon_entries, 'pikachu');
   });
 });

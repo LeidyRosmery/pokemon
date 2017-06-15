@@ -7,4 +7,4 @@ const filterByDistrict = (stations, query) => {
     return busqueda;
 
 }
-filterByDistrict(state.pokemons , 'a');
+  //console.log(state.pokemons.pokemon_entries[8].pokemon_species.name);
