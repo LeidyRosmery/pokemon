@@ -1,12 +1,12 @@
 'use strict';
-const SearchItem = (dato, update) => {
+const buscarPokemon = (dato, update) => {
    const col=$('<div class="col-sm-3 pokemon"></div>');
 
 
   while (dato.entry_number.toString().length<3){
         dato.entry_number = '0'+dato.entry_number;
   }
-   const imgPok=$('<img class="img-pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+dato.entry_number+'.png ">');
+   const imgPok=$('<img class="img-pokemon" data-toggle="modal" data-target=".bs-example-modal-lg" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+dato.entry_number+'.png ">');
    const divOpcion=$('<div class="opcion-pokemon" ></div>');
    const pokebola=$('<img class="iconos-pokedex" src="icon/pokeball_gray.png" alt="">');
    const corazon=$('<img class="iconos-pokedex" src="icon/valentines-heart.png" alt="">');
@@ -45,10 +45,10 @@ const Grilla = (update) => {
 
   input.on('keyup', (e) => {
         divBusqueda.empty();
-        const resultado = filterByDistrict(state.pokemons.pokemon_entries, input.val());
+        const resultado = filterByPokemon(state.pokemons.pokemon_entries, input.val());
 
         resultado.forEach((e) => {
-            divBusqueda.append(SearchItem(e, update));
+            divBusqueda.append(buscarPokemon(e, update));
             console.log(e);
         });
     });
