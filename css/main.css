@@ -1,0 +1,31 @@
+header {
+  margin-bottom: 3%;
+}
+.iconos-pokedex{
+  width: 20px;
+  height: 20px;
+  margin: 2px 8px;
+}
+.pokemon{
+  overflow: auto;
+  display: inline-block;
+  position: relative;
+}
+
+.opcion-pokemon{
+  display: flex;
+justify-content: center;
+}
+
+input[type='text']{
+border: none;
+border-bottom: 1px gray solid;
+width: 37%;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.red{
+  color:#e84848;
+}
