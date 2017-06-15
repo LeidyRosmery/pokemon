@@ -3,11 +3,11 @@ const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
- /*if (state.selectedPokemon == null) {
+ if (state.selectedPokemon == null) {
     wrapper.append(Grilla( _ => {
       render(root);
     }));
-  } else {
+  } /*else {
     wrapper.append(detallePokemon( _ => {
       render(root);
     }));
@@ -27,7 +27,6 @@ $( _ => {
     state.pokemons = json;
     const root = $('.root');
     render(root);
-    console.log(state.pokemons.pokemon_entries);
-    filterByDistrict(state.pokemons.pokemon_entries, 'pikachu');
+
   });
 });
