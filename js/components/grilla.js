@@ -8,7 +8,7 @@ const buscarPokemon = (dato, update) => {
   }
    const imgPok=$('<img class="img-pokemon" data-toggle="modal" data-target=".bs-example-modal-lg" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+dato.entry_number+'.png ">');
    const divOpcion=$('<div class="opcion-pokemon" ></div>');
-   const pokebola=$('<img class="iconos-pokedex" src="icon/pokeball_gray.png" alt="">');
+   const pokebola=$('<img class="iconos-pokedex" data-toggle="modal" data-target="#gridSystemModal"  src="icon/pokeball_gray.png" alt="">');
    const corazon=$('<img class="iconos-pokedex" src="icon/valentines-heart.png" alt="">');
    const data=$('<img class="iconos-pokedex" src="icon/data.png" alt="">');
    const nombre=$('<p class="text-center">'+dato.pokemon_species.name+'</p>');
@@ -20,9 +20,9 @@ const buscarPokemon = (dato, update) => {
    divOpcion.append(data);
    col.append(nombre);
 
-    imgPok.on('click', (e) => {
+    pokebola.on('click', (e) => {
         e.preventDefault();
-        state.selectedPokemon = pokemon;
+        state.selectedPokemon = dato;
         update();
     });
     console.log(col);

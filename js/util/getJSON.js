@@ -10,6 +10,5 @@ const getJSON = (url, cb) => {
 
   xhr.open('GET', url);
   xhr.responseType = 'json';
-
   xhr.send();
 };

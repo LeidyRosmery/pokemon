@@ -7,11 +7,11 @@ const render = (root) => {
     wrapper.append(Grilla( _ => {
       render(root);
     }));
-  } /*else {
+  } else {
     wrapper.append(detallePokemon( _ => {
       render(root);
     }));
-  }*/
+  }
   root.append(wrapper);
 }
 

@@ -11,7 +11,13 @@ header {
   display: inline-block;
   position: relative;
 }
-
+.modal-content{
+   width: 70%;
+   margin: 0 auto;
+   height: 60%;
+   position: relative;
+   top: 20%;
+}
 .opcion-pokemon{
   display: flex;
 justify-content: center;
