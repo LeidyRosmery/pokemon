@@ -1,27 +1,7 @@
 header {
   margin-bottom: 3%;
 }
-.iconos-pokedex{
-  width: 20px;
-  height: 20px;
-  margin: 2px 8px;
-}
-.pokemon{
-  overflow: auto;
-  display: inline-block;
-  position: relative;
-}
-.modal-content{
-   width: 70%;
-   margin: 0 auto;
-   height: 60%;
-   position: relative;
-   top: 20%;
-}
-.opcion-pokemon{
-  display: flex;
-justify-content: center;
-}
+
 
 input[type='text']{
 border: none;
@@ -29,9 +9,28 @@ border-bottom: 1px gray solid;
 width: 37%;
 outline: none;
 }
-.flex{
-  display: flex;
-  justify-content: space-between;
+.grilla {
+    background: #dbdbdb;
+    /* text-align: center; */
+    width: 175px;
+}
+img.img-pokemon {
+    width: 175px;
+}
+img.estructura {
+    width: 175px;
+    height: 60px;
+}
+.caracteristicas {
+  text-align: center;
+position: absolute;
+bottom: -6px;
+left: 53px;
+}
+.iconos-pokedex {
+    width: 20px;
+    height: 20px;
+    margin: 2px 3px;
 }
 .red{
   color:#e84848;

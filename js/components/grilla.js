@@ -1,26 +1,37 @@
 'use strict';
 const buscarPokemon = (dato, update) => {
-   const col=$('<div class="col-sm-3 pokemon"></div>');
-
-
+   const col=$('<div class="col-sm-2 col-sm-offset-1 pokemon">');
   while (dato.entry_number.toString().length<3){
         dato.entry_number = '0'+dato.entry_number;
   }
-   const imgPok=$('<img class="img-pokemon" data-toggle="modal" data-target=".bs-example-modal-lg" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+dato.entry_number+'.png ">');
-   const divOpcion=$('<div class="opcion-pokemon" ></div>');
-   const pokebola=$('<img class="iconos-pokedex" data-toggle="modal" data-target="#gridSystemModal"  src="icon/pokeball_gray.png" alt="">');
+
+ const grilla=$('<div class="grilla">');
+  col.append(grilla);
+ const imgPokemon= $('<img class="img-pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+dato.entry_number+'.png ">')
+ grilla.append(imgPokemon);
+ const estructura= $(' <img class="estructura" src="img/pokmon.png" alt="">')
+ grilla.append(estructura);
+ const caracteristicas=$('<div class="caracteristicas">');
+ grilla.append(caracteristicas);
+ const opciones=$('<div class="opcion-pokemon" >');
+caracteristicas.append(opciones);
+ const nombre=$('<p class="nombre-pokemon">'+dato.pokemon_species.name+'</p>');
+caracteristicas.append(nombre);
+   const enlacePokebola=$('<a class="iconos-pokedex" href="#ventana1" data-toggle="modal" </a>');
+   const pokebola=$('<img class="iconos-pokedex" src="icon/pokeball_gray.png" alt="">');
+   const enlaceCorazon=$('<a class="iconos-pokedex" href="#ventana1" data-toggle="modal" </a>');
    const corazon=$('<img class="iconos-pokedex" src="icon/valentines-heart.png" alt="">');
+   const enlaceData=$('<a class="iconos-pokedex" href="#ventana1" data-toggle="modal" </a>');
    const data=$('<img class="iconos-pokedex" src="icon/data.png" alt="">');
-   const nombre=$('<p class="text-center">'+dato.pokemon_species.name+'</p>');
+  opciones.append(enlaceData);
+   enlaceData.append(data);
+   opciones.append(enlacePokebola);
+   enlacePokebola.append(pokebola);
+   opciones.append(enlaceCorazon);
+   enlaceCorazon.append(corazon);
 
-   col.append(imgPok);
-   col.append(divOpcion);
-   divOpcion.append(pokebola);
-   divOpcion.append(corazon);
-   divOpcion.append(data);
-   col.append(nombre);
 
-    pokebola.on('click', (e) => {
+       pokebola.on('click', (e) => {
         e.preventDefault();
         state.selectedPokemon = dato;
         update();
@@ -35,7 +46,7 @@ const Grilla = (update) => {
   const col=$('<div class="col-sm-12 flex"></div>');
   const input =$('<input class="text-center" type="text" name="" value="">');
   const boton=$('<button class="btn btn-lg btn-success" type="button" name="button">A-Z</button>');
-  const divBusqueda=$('<div class="row"></div>');
+  const divBusqueda=$('<div class=""></div>');
 
   contenedor.append(row);
   contenedor.append(divBusqueda);
