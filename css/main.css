@@ -1,7 +1,10 @@
 header {
   margin-bottom: 3%;
 }
-
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
 
 input[type='text']{
 border: none;

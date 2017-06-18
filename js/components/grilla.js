@@ -1,10 +1,9 @@
 'use strict';
 const buscarPokemon = (dato, update) => {
-   const col=$('<div class="col-sm-2 col-sm-offset-1 pokemon">');
+   const col=$('<div class="col-sm-2  pokemon">');
   while (dato.entry_number.toString().length<3){
         dato.entry_number = '0'+dato.entry_number;
   }
-
  const grilla=$('<div class="grilla">');
   col.append(grilla);
  const imgPokemon= $('<img class="img-pokemon" src="http://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+dato.entry_number+'.png ">')
@@ -33,6 +32,7 @@ caracteristicas.append(nombre);
 
        pokebola.on('click', (e) => {
         e.preventDefault();
+        console.log(e.target.parentNode.nodeName);
         state.selectedPokemon = dato;
         update();
     });
@@ -46,7 +46,7 @@ const Grilla = (update) => {
   const col=$('<div class="col-sm-12 flex"></div>');
   const input =$('<input class="text-center" type="text" name="" value="">');
   const boton=$('<button class="btn btn-lg btn-success" type="button" name="button">A-Z</button>');
-  const divBusqueda=$('<div class=""></div>');
+  const divBusqueda=$('<div class="row"></div>');
 
   contenedor.append(row);
   contenedor.append(divBusqueda);
