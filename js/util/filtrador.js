@@ -1,9 +1,9 @@
 'use strict';
-const filterByPokemon = (stations, query) => {
-    const busqueda = stations.filter((elemento) => {
+const filterByPokemon = (pokemon, query) => {
+    const busqueda = pokemon.filter((elemento) => {
         return (elemento.pokemon_species.name.indexOf(query) != -1);
     });
+  //  state.selectedPokemon = busqueda;
     return busqueda;
 
 }
-  //console.log(state.pokemons.pokemon_entries[8].pokemon_species.name);

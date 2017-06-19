@@ -5,7 +5,18 @@ header {
   display: flex;
   justify-content: space-between;
 }
-
+.celeste{
+  background: #36a4d3;
+color: #fff;
+padding: 20px;
+}
+.pokedex{
+    background: #dbdbdb;
+}
+.pokedex .caracteristicas {
+    top: 187px;
+    left: 66px;
+}
 input[type='text']{
 border: none;
 border-bottom: 1px gray solid;
