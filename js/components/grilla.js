@@ -15,8 +15,9 @@ const buscarPokemon = (dato, update) => {
  const opciones=$('<div class="opcion-pokemon" >');
 caracteristicas.append(opciones);
  const nombre=$('<p class="nombre-pokemon">'+dato.pokemon_species.name+'</p>');
+ 
 caracteristicas.append(nombre);
-   const enlacePokebola=$('<a class="iconos-pokedex" href="#ventana1" data-toggle="modal" </a>');
+   const enlacePokebola=$('<a class="iconos-pokedex" href="#ventana1" data-toggle="modal" data-pokID='+dato.entry_number+' </a>');
    const pokebola=$('<img class="iconos-pokedex" src="icon/pokeball_gray.png" alt="">');
    const enlaceCorazon=$('<a class="iconos-pokedex" href="#ventana1" data-toggle="modal" </a>');
    const corazon=$('<img class="iconos-pokedex" src="icon/valentines-heart.png" alt="">');
@@ -29,10 +30,9 @@ caracteristicas.append(nombre);
    opciones.append(enlaceCorazon);
    enlaceCorazon.append(corazon);
 
-
        pokebola.on('click', (e) => {
         e.preventDefault();
-        console.log(e.target.parentNode.nodeName);
+        console.log(e.target.parentNode.dataset.pokid);
         state.selectedPokemon = dato;
         update();
     });

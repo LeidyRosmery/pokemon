@@ -1,4 +1,5 @@
 'use strict';
+
 const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
@@ -26,6 +27,8 @@ $( _ => {
     if (err) { return alert(err.message);}
     state.pokemons = json;
     const root = $('.root');
+    //console.logI(state.pokemon.move);
+    //console.log(state.pokemons.flavor_text_entries[3]);
     render(root);
 
   });
